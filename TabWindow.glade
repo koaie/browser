@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.18"/>
+  <object class="GtkImage" id="His">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="halign">start</property>
+    <property name="valign">start</property>
+    <property name="icon-name">document-open-recent-symbolic</property>
+  </object>
+  <object class="GtkImage" id="backwardsImage">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">go-previous</property>
+  </object>
+  <object class="GtkImage" id="fav">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">emblem-favorite</property>
+  </object>
+  <object class="GtkImage" id="forwardImage">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">go-next</property>
+  </object>
+  <object class="GtkImage" id="homeImage">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">user-home-symbolic</property>
+  </object>
+  <object class="GtkImage" id="options">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">open-menu-symbolic</property>
+  </object>
+  <object class="GtkImage" id="refreshImage">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">view-refresh-symbolic</property>
+  </object>
+  <object class="GtkWindow" id="TabWindow">
+    <property name="can-focus">False</property>
+    <property name="default-width">1280</property>
+    <property name="default-height">720</property>
+    <property name="icon-name">applications-internet</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-start">3</property>
+            <property name="margin-end">3</property>
+            <property name="margin-top">3</property>
+            <property name="margin-bottom">3</property>
+            <property name="spacing">3</property>
+            <child>
+              <object class="GtkButton" id="home">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">homeImage</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="homePress" swapped="no"/>
+                <signal name="clicked" handler="homePress" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="refresh">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">refreshImage</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="refreshView" swapped="no"/>
+                <signal name="clicked" handler="refreshView" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="goBack">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">backwardsImage</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="back" swapped="no"/>
+                <signal name="clicked" handler="back" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="goForward">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">forwardImage</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="forward" swapped="no"/>
+                <signal name="clicked" handler="forward" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="urlBar">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="primary-icon-name">security-medium</property>
+                <property name="secondary-icon-name">mail-forward</property>
+                <property name="primary-icon-activatable">False</property>
+                <property name="placeholder-text" translatable="yes">Enter Url...</property>
+                <property name="input-purpose">url</property>
+                <signal name="activate" handler="urlBar_activate" swapped="no"/>
+                <signal name="icon-press" handler="urlBar_icon_press" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="favorites">
+                <property name="label" translatable="yes">Favorites</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">fav</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="favsPress" swapped="no"/>
+                <signal name="clicked" handler="favsPress" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="historyButton">
+                <property name="label" translatable="yes">History</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">His</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="historyPress" swapped="no"/>
+                <signal name="clicked" handler="historyPress" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="optionsButton">
+                <property name="label" translatable="yes">Options</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">options</property>
+                <property name="always-show-image">True</property>
+                <signal name="activate" handler="optionsPress" swapped="no"/>
+                <signal name="clicked" handler="optionsPress" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">7</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="shadow-type">in</property>
+            <child>
+              <object class="GtkTextView" id="htmlBox">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="resize-mode">queue</property>
+                <property name="editable">False</property>
+                <property name="wrap-mode">char</property>
+                <signal name="draw" handler="onDraw" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
